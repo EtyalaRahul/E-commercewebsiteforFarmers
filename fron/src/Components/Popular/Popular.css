@@ -1,0 +1,164 @@
+.popular {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  height: auto;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.popular h1 {
+  color: #171717;
+  font-size: 50px; /* Laptop-size font */
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.popular hr {
+  width: 200px;
+  height: 6px;
+  border-radius: 5px;
+  background-color: #252525;
+  margin: 0 auto;
+}
+
+.popular-item {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row by default */
+  gap: 15px;
+ 
+}
+
+.popular-item > div {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  height: auto;
+}
+
+.popular-item img {
+  width: 100%;
+  height: 150px; /* Fixed height for images */
+  object-fit: cover;
+}
+
+.popular-item > div .item-info {
+  padding: 10px;
+  font-size: 14px; /* Adjusted font size for larger screens */
+  text-align: center;
+}
+
+.popular-item > div .item-info .item-name {
+  font-weight: 500;
+  font-size: 12px; /* Adjusted font size for product name */
+  color: #171717;
+  line-height: 1.2;
+}
+
+.popular-item > div .item-info .item-price {
+  font-size: 14px; /* Adjusted font size for price */
+  color: #252525;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Hover effect */
+.popular-item > div:hover {
+  transform: scale(1.05);
+}
+
+/* Medium screens (tablet size) */
+@media (max-width: 1200px) {
+  .popular-item {
+    grid-template-columns: repeat(4, 1fr); /* Keep 4 items per row */
+  }
+
+  .popular h1 {
+    font-size: 40px;
+  }
+
+  .popular-item > div {
+    max-width: 200px;
+  }
+
+  .popular-item img {
+    height: 120px;
+  }
+
+  .popular-item .item-info .item-name {
+    font-size: 10px;
+  }
+
+  .popular-item .item-info .item-price {
+    font-size: 12px;
+  }
+}
+
+/* Small screens (mobile size) */
+@media (max-width: 768px) {
+  .popular h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  .popular-item {
+    grid-template-columns: repeat(4, 1fr); /* Keep 4 items per row */
+    padding: 0 10px; /* Adjust the padding */
+  }
+
+  .popular-item > div {
+    max-width: 150px; /* Smaller item boxes */
+    padding: 5px;
+  }
+
+  .popular-item img {
+    height: 100px; /* Smaller images */
+  }
+
+  .popular-item .item-info .item-name {
+    font-size: 9px; /* Smaller name font */
+    line-height: 1.1;
+  }
+
+  .popular-item .item-info .item-price {
+    font-size: 10px; /* Smaller price font */
+    line-height: 1.1;
+  }
+}
+
+/* Very small screens (portrait mobile) */
+@media (max-width: 480px) {
+  .popular h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .popular-item {
+    grid-template-columns: repeat(4, 1fr); /* Keep 4 items per row */
+    padding: 0 10px; /* Adjust padding */
+  }
+
+  .popular-item > div {
+    max-width: 80px; /* Smallest item box width */
+    max-height: 100px;
+    padding: 5px;
+  }
+
+  .popular-item img {
+    height: 4px;
+    width: 4px; /* Smaller image size */
+  }
+
+  .popular-item .item-info .item-name {
+    font-size: 2px; /* Smallest name font */
+    line-height: 1;
+  }
+
+  .popular-item .item-info .item-price {
+    font-size: 2px; /* Smallest price font */
+    line-height: 1;
+  }
+}

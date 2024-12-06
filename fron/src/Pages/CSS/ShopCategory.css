@@ -1,0 +1,136 @@
+/* Shop category container */
+.shop-category {
+    width: 100%;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Banner container */
+.banner-container {
+    width: 100vw;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: -20px -20px 20px -20px;
+    padding: 0;
+}
+
+/* Banner image */
+.banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 128, 0, 0.2);
+}
+
+/* Index and sort section */
+.shopcategory-indexSort {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.shopcategory-sort {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+}
+
+.shopcategory-sort img {
+    width: 18px;
+    height: 13px;
+    margin-left: 8px;
+}
+
+/* Products container with dark background for 4 items */
+.shopcategory-products-wrapper {
+    background-color: rgba(44, 62, 80, 0.9); /* Dark background */
+    border-radius: 10px; /* Rounded corners for the container */
+    padding: 20px;
+    margin: 0 auto; /* Center alignment */
+    max-width: 900px; /* Limit width for 4 items */
+    overflow: hidden;
+}
+
+.shopcategory-products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+    gap: 20px;
+}
+
+/* Product item styles */
+.item {
+    background-color: rgba(232, 245, 233, 0.5);
+    border: 1px solid rgba(220, 237, 200, 0.9);
+    border-radius: 10px;
+    height: 230px;
+    width: 190px;
+    padding: 2px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.item:hover {
+    transform: scale(1.08);
+    box-shadow: 0 16px 32px rgba(0, 255, 0, 1);
+}
+
+.item img {
+    display: inline-block;
+    width: 160px;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 1px;
+}
+
+.item-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #2c662d;
+    margin-bottom: 2px;
+}
+
+.item-price {
+    color: #4caf50;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: green;
+}
+
+.new-price {
+    font-size: 16px;
+    color: #1b5e20;
+    font-weight: bold;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .shopcategory-products {
+        grid-template-columns: repeat(4, 1fr); /* 3 per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .shopcategory-products {
+        grid-template-columns: repeat(4, 1fr); /* 2 per row on small screens */
+    }
+
+    .banner-container {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .shopcategory-products {
+        grid-template-columns: 1fr; /* 1 per row on extra small screens */
+    }
+}
